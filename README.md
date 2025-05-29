@@ -6,9 +6,16 @@ El componente da un vistazo a lo que es la presentacion en un card para una peli
 - Diseño atractivo con estilos encapsulados.
 - Escalable mediante atributos HTML.
 - Incluye slot para enlace personalizado (por ejemplo, ver más detalles o tráiler).
-- 
+
 ## Funciones del componente.
 
+### observedAttributes.
+Observa los valores que se corresponde y se puede usar en distintas funciones.
+```html
+static get observedAttributes() {
+        return ["img", "titulo", "sinopsis", "valoracion"];
+    }
+```
 ### getTemplate.
 
 Dentro de la funcion tenemos lo que es la plantilla del card para las peliculas, en la cual se puede apreciar que esta dentro de una section, en la misma se puede apreciar los campos que son de imagen, titulo, sinopsis y la valoracion del mismo, añadido tambien un slot que funciona como un boton (usando la etiqueta <a>) que nos dirige a la pagina para ver la pelicula.
